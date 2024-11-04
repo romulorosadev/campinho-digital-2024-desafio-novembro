@@ -2,11 +2,21 @@
 
 ## 📋 Descrição do Projeto
 
-Imagine que você faz parte de uma equipe de desenvolvimento responsável por criar uma plataforma inovadora que permita aos usuários explorar e interagir com diferentes tipos de conteúdo, como filmes, produtos ou times de futebol. O objetivo é desenvolver uma aplicação que consuma dados de uma API rica em informações e apresente esses dados de maneira intuitiva e atraente.
 
-## Para se inspirar - ONG Campinho - Loja de Roupas
+🤔 Imagine que você precisa juntar dinheiro e decide criar uma pequena loja online para listar seus itens. O objetivo é desenvolver uma plataforma que permita a você apresentar e vender seus produtos de maneira intuitiva e atraente, refletindo a sua identidade única. Essa loja não só ajudará você a arrecadar fundos, mas também permitirá que os visitantes conheçam um pouco mais sobre você e o que está à venda.
+
+Ao consumir a API da nossa loja, você pode criar uma experiência que tenha a sua cara, o seu estilo e o nome que desejar. Com essa flexibilidade, a sua loja pode ser personalizada de acordo com a identidade que você sempre imaginou, garantindo uma conexão mais forte com o seu público.
+
+## Para se inspirar - ONG Campinho - Loja de Roupas 👕🛒
 
 A ONG Campinho é uma organização sem fins lucrativos dedicada a capacitar pessoas através  do ensino de tecnologia. Para ajudar a arrecadar fundos para manter nossas turmas, desenvolvemos uma plataforma de e-commerce que permite a compra de roupas, com todas as vendas revertidas para os nossos programas.
+
+
+<img width="1159" alt="Captura de Tela 2024-11-04 às 12 19 04" src="https://github.com/user-attachments/assets/55c1a25a-0d64-4447-945d-5564f7434480">
+
+<img width="577" alt="Captura de Tela 2024-11-04 às 12 19 13" src="https://github.com/user-attachments/assets/b3b1f78d-c097-40e7-9f1a-65ef0f0c41e2">
+
+
 
 ## ✅ Critérios de Aceitação
 
@@ -48,18 +58,6 @@ Authorization: Bearer 66e2589493175d28b257c265c4ba0888ef2f77722b35c45b1666018cda
 
 ## Endpoints Disponíveis 📑
 
-### Movies (Filmes):
-
-~~~javascript
-Listar todos os filmes: GET /movies
-Detalhes de um filme específico: GET /movies/:id
-~~~
-
-#### o que posso fazer? 🤔
-
-- Página de Lista de Filmes
-Objetivo: Apresentar uma visão geral dos filmes disponíveis.
-
 ### Products (Produtos):
 
 ~~~javascript
@@ -67,35 +65,165 @@ Listar todos os produtos: GET /products
 Detalhes de um produto específico: GET /products/:id
 ~~~
 
-#### o que posso fazer? 🤔
-- Página de Lista de Produtos
-Objetivo: Apresentar uma visão geral de todos os produtos disponíveis.
-
-
-### Teams (Times de Futebol):
-~~~javascript
-Listar todos os times: GET /teams
-Detalhes de um time específico: GET /teams/:id
-~~~
-
-#### o que posso fazer? 🤔
-- Página de Lista de Times
-Objetivo: Apresentar uma visão geral de todos os times de futebol disponíveis.
-
-### Users (Usuários):
-
-~~~javascript
-Listar todos os usuários: GET /users
-Detalhes de um usuário específico: GET /users/:id
-~~~
-
-#### o que posso fazer? 🤔
-
-- Página de Lista de Usuários
-Objetivo: Exibir uma visão geral de todos os usuários cadastrados na plataforma.
-## 🛠 Instruções para Trabalhar 
-
 ## 📡 Consumindo a API com JS:
+
+Este guia mostra como consumir uma API RESTful com JavaScript, utilizando fetch() para fazer requisições e manipular o DOM. O exemplo foca em consumir dados de uma API Strapi e exibi-los em uma página web.
+
+### O que é JSON?
+JSON (JavaScript Object Notation) é um formato de dados leve e fácil de ler e escrever, amplamente utilizado para trocar informações entre cliente e servidor. No JavaScript, você pode transformar a resposta JSON em um objeto utilizável com o método `.json()`.
+
+1. Defina a URL da API e o Token:
+
+Comece definindo a URL da API que você deseja consumir e o token de autorização que será necessário nas requisições.
+
+~~~javascript
+const apiUrl = 'https://ecom-back-strapi.onrender.com/api/products';
+const token = 'Bearer SEU_TOKEN_AQUI'; // Insira seu token aqui
+~~~
+
+2. Crie uma Função para Configurar os Cabeçalhos:
+
+Crie uma função que retorna os cabeçalhos necessários para a requisição, incluindo o token de autorização.
+~~~javascript
+function configurarCabecalhos() {
+    return {
+        'Authorization': token,
+        'Content-Type': 'application/json'
+    };
+}
+~~~
+
+3. Faça a Requisição à API:
+
+Use a função fetch para fazer uma requisição GET à API dentro de uma função assíncrona. Verifique a resposta e trate os erros adequadamente.
+
+~~~javascript
+async function buscarProdutos() {
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'GET',
+            headers: configurarCabecalhos()
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro na resposta da API: ' + response.status);
+        }
+
+        const data = await response.json();
+        return data.data; // Retorna os produtos
+    } catch (error) {
+        console.error('Erro ao buscar dados da API:', error);
+        return null; // Em caso de erro
+    }
+}
+~~~
+
+4. Exiba os Produtos:
+
+Crie uma função que aceita os produtos como parâmetro e cria elementos HTML para cada um deles, exibindo as informações na página.
+
+~~~javascript
+function exibirProdutos(produtos) {
+    const produtosContainer = document.getElementById('produtos');
+    produtosContainer.innerHTML = ''; // Limpa o container antes de adicionar novos produtos
+
+    produtos.forEach(produto => {
+        // Crie um elemento de produto
+        const produtoDiv = document.createElement('div');
+        produtoDiv.classList.add('produto');
+
+        // Adicione a imagem do produto
+        const imagem = document.createElement('img');
+        imagem.src = produto.imagens[0]; // Usa a primeira imagem
+        imagem.alt = produto.nome;
+        imagem.classList.add('produto-imagem');
+
+        // Adicione o nome e preço do produto
+        const nome = document.createElement('h2');
+        nome.textContent = produto.nome;
+
+        const preco = document.createElement('p');
+        preco.textContent = `Preço: R$ ${produto.preco.toFixed(2)}`;
+
+        // Adicione um botão de compra
+        const botaoComprar = document.createElement('button');
+        botaoComprar.textContent = 'Comprar';
+        botaoComprar.onclick = () => {
+            // Aqui você pode adicionar lógica para o botão de compra
+            alert(`Você comprou: ${produto.nome}`);
+        };
+
+        // Adicione os elementos ao container do produto
+        produtoDiv.appendChild(imagem);
+        produtoDiv.appendChild(nome);
+        produtoDiv.appendChild(preco);
+        produtoDiv.appendChild(botaoComprar);
+        produtosContainer.appendChild(produtoDiv);
+    });
+}
+
+~~~
+
+5. Função Principal para Executar o Fluxo:
+
+Por fim, crie uma função principal que chama as funções de buscar produtos e exibir produtos.
+
+~~~javascript
+async function iniciarApp() {
+    const produtos = await buscarProdutos();
+    if (produtos) {
+        exibirProdutos(produtos);
+    } else {
+        console.error('Nenhum produto encontrado.');
+    }
+}
+
+// Chame a função principal ao carregar a página
+window.onload = iniciarApp;
+
+~~~
+
+## 🚀 Hacker Edition: Aprimorando o Projeto da Loja Virtual
+Se você está pronto para ir além e aprender mais sobre desenvolvimento web, aqui estão algumas sugestões e recursos para aprimorar o seu projeto de loja virtual. Essas adições não apenas melhorarão a experiência do usuário, mas também darão a você uma compreensão mais profunda do desenvolvimento JavaScript e do front-end.
+
+1. Testes Unitários com Jest
+
+- Adicione testes para suas funções usando Jest.
+
+- Verifique se as funções de busca e manipulação de produtos funcionam corretamente.
+- Use npm install --save-dev jest para instalar.
+  
+2. Tratamento de Erros Específicos
+
+- Crie funções para exibir mensagens de erro específicas na interface.
+- Utilize try-catch para lidar com erros durante chamadas à API.
+- Exiba mensagens claras para o usuário, como "Erro ao carregar os produtos".
+  
+3. Loading Spinner
+
+- Implemente um spinner de carregamento enquanto os dados estão sendo buscados.
+- Crie um elemento HTML para o spinner e controle sua visibilidade com JavaScript.
+- Use funções para mostrar e esconder o loading.
+  
+4. Design Responsivo
+
+5. Utilize CSS Flexbox ou Grid para garantir que os produtos se ajustem bem em diferentes tamanhos de tela.
+   
+- Adicione media queries para otimizar a exibição em dispositivos móveis.
+
+5. Implementação de um Carrinho de Compras
+
+- Adicione funcionalidade para que os usuários possam adicionar produtos ao carrinho.
+- Crie uma página de carrinho que exiba os itens selecionados e o total.
+  
+6. Persistência de Dados
+- Utilize localStorage ou sessionStorage para manter os dados do carrinho entre as sessões do usuário.
+  
+7. Documentação
+- Crie uma documentação clara para seu projeto, explicando como configurá-lo, executá-lo e como funcionam suas principais funcionalidades.
+
+
+## 💻Començando a desenvolver: 
 
 ### 1. Fork do Repositório
    - Um "fork" é uma cópia de um repositório que fica no seu perfil GitHub. Você faz um fork para ter uma versão própria do projeto na qual você pode trabalhar. Isso permite que você modifique e experimente o código sem afetar o repositório original.
@@ -162,6 +290,10 @@ npm start
 Depois de implementada a solução e adicionar comentários ao código, você precisa versionar essas alterações usando o Git.
 
 Quando você estiver trabalhando em dupla, é fundamental usar o Git para controlar as versões do projeto de forma organizada e eficiente. Isso ajuda a evitar conflitos de código e facilita a colaboração. 
+
+### 6. Enviar o Repositório para o Moodle
+Essa é uma atividade avaliativa, você deve enviar o link do repositório com as questões respondidas para o Moodle, para que o instrutor possa revisar o seu trabalho. O link do GitHub facilita o acesso ao código e também permite que o instrutor veja todo o histórico de commits (versões anteriores do código), o que é útil para acompanhar seu progresso.
+
 
 
 ## **Boa sorte e bom código!** 🚀📘
