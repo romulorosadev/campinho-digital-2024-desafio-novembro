@@ -6,7 +6,7 @@ Imagine que você faz parte de uma equipe de desenvolvimento responsável por cr
 
 ## Para se inspirar - ONG Campinho - Loja de Roupas
 
-A ONG Campinho é uma organização sem fins lucrativos dedicada a capacitar pessoas com o ensino de tecnologia. Para ajudar a arrecadar fundos para manter nossas turmas, desenvolvemos uma plataforma de e-commerce que permite a compra de roupas, com todas as vendas revertidas para os nossos programas.
+A ONG Campinho é uma organização sem fins lucrativos dedicada a capacitar pessoas através  do ensino de tecnologia. Para ajudar a arrecadar fundos para manter nossas turmas, desenvolvemos uma plataforma de e-commerce que permite a compra de roupas, com todas as vendas revertidas para os nossos programas.
 
 ## ✅ Critérios de Aceitação
 
