@@ -72,8 +72,8 @@ Detalhes de um time específico: GET /teams/:id
 Users (Usuários):
 
 ~~~javascript
-Listar todos os times: GET /teams
-Detalhes de um time específico: GET /teams/:id
+Listar todos os usuários: GET /users
+Detalhes de um usuário específico: GET /users/:id
 ~~~
 
 ## 🛠 Instruções para Trabalhar 
