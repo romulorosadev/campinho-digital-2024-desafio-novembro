@@ -1,4 +1,4 @@
-## + **Projeto: Plataforma de Exploração de Conteúdo*
+##  **Projeto: Plataforma de Exploração de Conteúdo*
 
 ## 📋 Descrição do Projeto
 
@@ -27,10 +27,54 @@ Os dados devem ser carregados de forma assíncrona e tratadas possíveis falhas 
 Solte sua imaginação!: Sinta-se à vontade para estilizar e aprimorar a aplicação da forma que desejar. Use cores, fontes, animações e layouts criativos para tornar a experiência visualmente atrativa e única. Quanto mais criativa e bem apresentada a interface, melhor!
 
 
-### Git e GitHub:
-- Uso de comandos do Git: `git add`, `git commit`, `git pull`, `git push`.
-- Gerenciamento de repositórios no GitHub (clone e fork).
+## 📡 Sobre a api:
 
+#### ⚠️ Atenção  Se a API exigir uma chave de autenticação (API Key) e você tentar fazer uma requisição sem ela, receberá um erro de resposta, geralmente com um código de status 401 (Não autorizado).
+
+Exemplo do postman sem `API KEY`
+
+<img width="1027" alt="Captura de Tela 2024-11-04 às 10 53 38" src="https://github.com/user-attachments/assets/43bbacb7-88b3-407a-843b-fafbd26477ee">
+
+### Certifique-se de incluir a API Key ou um token de autenticação no cabeçalho da requisição da seguinte forma:
+
+# Certifique-se de incluir a API Key no cabeçalho da requisição da seguinte forma:
+
+~~~javascript
+Authorization: Bearer 66e2589493175d28b257c265c4ba0888ef2f77722b35c45b1666018cda8f510bf8dec9159845134c51d8012a9ff7da8701b2491532aa401310a29a1ba7f4b8d33e6eaeb7ca32037d339ec8d23a3d20bc2fa47141832b702892b48761373690ae6bd51786dbe75cd78f82ca400032cd1a18522f53c3b98016e79c90ef0f3a9cb9
+~~~
+
+<img width="1020" alt="Captura de Tela 2024-11-04 às 11 11 35" src="https://github.com/user-attachments/assets/6eb85c4e-5dcc-4c1b-86b4-346d6291c2e9">
+
+
+## Endpoints Disponíveis 📑
+Movies (Filmes):
+
+~~~javascript
+Listar todos os filmes: GET /movies
+Detalhes de um filme específico: GET /movies/:id
+~~~
+
+
+Products (Produtos):
+
+~~~javascript
+Listar todos os produtos: GET /products
+Detalhes de um produto específico: GET /products/:id
+~~~
+
+Teams (Times de Futebol):
+
+~~~javascript
+Listar todos os times: GET /teams
+Detalhes de um time específico: GET /teams/:id
+~~~
+
+Users (Usuários):
+
+~~~javascript
+Listar todos os times: GET /teams
+Detalhes de um time específico: GET /teams/:id
+~~~
 
 ## 🛠 Instruções para Trabalhar 
 
