@@ -27,7 +27,9 @@ Os dados devem ser carregados de forma assíncrona e tratadas possíveis falhas 
 Solte sua imaginação!: Sinta-se à vontade para estilizar e aprimorar a aplicação da forma que desejar. Use cores, fontes, animações e layouts criativos para tornar a experiência visualmente atrativa e única. Quanto mais criativa e bem apresentada a interface, melhor!
 
 
-## 📡 Sobre a api:
+## 📡 Testando a Api no Postman:
+
+Testando a Api utilizando o postman podemos validar o formato e estrutura: ver como os dados chegam da API permite que o desenvolvedor entenda o formato (JSON, XML, etc.), a estrutura dos objetos, os campos disponíveis e seus tipos. Isso ajuda a planejar como manipular e renderizar esses dados no front-end.
 
 #### ⚠️ Atenção  Se a API exigir uma chave de autenticação (API Key) e você tentar fazer uma requisição sem ela, receberá um erro de resposta, geralmente com um código de status 401 (Não autorizado).
 
@@ -35,9 +37,8 @@ Exemplo do postman sem `API KEY`
 
 <img width="1027" alt="Captura de Tela 2024-11-04 às 10 53 38" src="https://github.com/user-attachments/assets/43bbacb7-88b3-407a-843b-fafbd26477ee">
 
-### Certifique-se de incluir a API Key ou um token de autenticação no cabeçalho da requisição da seguinte forma:
 
-# Certifique-se de incluir a API Key no cabeçalho da requisição da seguinte forma:
+### Certifique-se de incluir a API Key no cabeçalho da requisição da seguinte forma:
 
 ~~~javascript
 Authorization: Bearer 66e2589493175d28b257c265c4ba0888ef2f77722b35c45b1666018cda8f510bf8dec9159845134c51d8012a9ff7da8701b2491532aa401310a29a1ba7f4b8d33e6eaeb7ca32037d339ec8d23a3d20bc2fa47141832b702892b48761373690ae6bd51786dbe75cd78f82ca400032cd1a18522f53c3b98016e79c90ef0f3a9cb9
@@ -94,6 +95,8 @@ Detalhes de um usuário específico: GET /users/:id
 - Página de Lista de Usuários
 Objetivo: Exibir uma visão geral de todos os usuários cadastrados na plataforma.
 ## 🛠 Instruções para Trabalhar 
+
+## 📡 Consumindo a API com JS:
 
 ### 1. Fork do Repositório
    - Um "fork" é uma cópia de um repositório que fica no seu perfil GitHub. Você faz um fork para ter uma versão própria do projeto na qual você pode trabalhar. Isso permite que você modifique e experimente o código sem afetar o repositório original.
