@@ -46,14 +46,52 @@ Exemplo do postman sem `API KEY`
 
 <img width="1027" alt="Captura de Tela 2024-11-04 às 10 53 38" src="https://github.com/user-attachments/assets/43bbacb7-88b3-407a-843b-fafbd26477ee">
 
+### Conseguindo sua API Key 
+
+Será nencessário um *POST* usando as seguintes credenciais para conseguir a sua A `Api key`
+
+~~~json
+https://ecom-back-strapi.onrender.com/api/auth/local
+~~~
+
+
+~~~json
+{
+  "identifier": "campinho@mail.com",
+  "password": "Campinho@12"
+}
+~~~
+
+Você deve enviar um corpo JSON com as credenciais do usuário acima. Como na foto abaixo:
+
+<img width="1057" alt="Captura de Tela 2024-11-04 às 12 52 41" src="https://github.com/user-attachments/assets/22cafe06-d843-4936-aee4-e4b1cb0bfcae">
+
+
+a resposta da sua requisição tera um `JWT` que vc deverá usar como `API KEY` 
+~~~json
+{
+    "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMwNzM1NTUzLCJleHAiOjE3MzMzMjc1NTN9.8tahgsa-twuEcgyDvmwl2R9QCHRlEsppSl95FmpKcBA",
+    "user": {
+        "id": 1,
+        "username": "campinho",
+        "email": "campinho@mail.com",
+        "provider": "local",
+        "confirmed": false,
+        "blocked": false,
+        "createdAt": "2024-11-04T15:49:10.569Z",
+        "updatedAt": "2024-11-04T15:49:10.569Z"
+    }
+}
+~~~
+
 
 ### Certifique-se de incluir a API Key no cabeçalho da requisição da seguinte forma:
 
 ~~~javascript
-Authorization: Bearer 66e2589493175d28b257c265c4ba0888ef2f77722b35c45b1666018cda8f510bf8dec9159845134c51d8012a9ff7da8701b2491532aa401310a29a1ba7f4b8d33e6eaeb7ca32037d339ec8d23a3d20bc2fa47141832b702892b48761373690ae6bd51786dbe75cd78f82ca400032cd1a18522f53c3b98016e79c90ef0f3a9cb9
+Authorization: Bearer SUACHAVE
 ~~~
 
-<img width="1020" alt="Captura de Tela 2024-11-04 às 11 11 35" src="https://github.com/user-attachments/assets/6eb85c4e-5dcc-4c1b-86b4-346d6291c2e9">
+<img width="1029" alt="Captura de Tela 2024-11-04 às 13 09 02" src="https://github.com/user-attachments/assets/e447f9ce-f942-457b-a56d-171d641f010c">
 
 
 ## Endpoints Disponíveis 📑
