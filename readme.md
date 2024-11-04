@@ -103,7 +103,7 @@ Listar todos os produtos: GET /products
 Detalhes de um produto específico: GET /products/:id
 ~~~
 
-Caso nao consiga gerar uma api use a key abaixo: 
+Caso nao consiga gerar use a key abaixo: 
 ~~~javascript
 Api token reserva: 762d95036dee4d66f200974e49b9e9a6a3c3ecd3b3657787e9225a76d202e2aa9c5838e7150688b6ff166fd339640f4f9089d4bcc2f04ea424ff2edf3f2564f3a6875e3f1736ca2d9b56216496b65a15f58ffee5fc0d8036ccf286d88e92eb0b4e0916150a0beace9cc1a5fd5184814979edb963ff4d317925cec0c59c8e3121
 ~~~
