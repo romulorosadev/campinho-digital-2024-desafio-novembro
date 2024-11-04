@@ -1,4 +1,4 @@
-##  **Projeto: Plataforma de Exploração de Conteúdo*
+**Projeto: Plataforma de Exploração de Conteúdo*
 
 ## 📋 Descrição do Projeto
 
@@ -54,6 +54,10 @@ Listar todos os filmes: GET /movies
 Detalhes de um filme específico: GET /movies/:id
 ~~~
 
+### o que posso fazer? 🤔
+
+- Página de Lista de Filmes
+Objetivo: Apresentar uma visão geral dos filmes disponíveis.
 
 Products (Produtos):
 
@@ -62,12 +66,22 @@ Listar todos os produtos: GET /products
 Detalhes de um produto específico: GET /products/:id
 ~~~
 
-Teams (Times de Futebol):
+### o que posso fazer? 🤔
 
+- Página de Lista de Produtos
+Objetivo: Apresentar uma visão geral de todos os produtos disponíveis.
+
+
+Teams (Times de Futebol):
 ~~~javascript
 Listar todos os times: GET /teams
 Detalhes de um time específico: GET /teams/:id
 ~~~
+
+### o que posso fazer? 🤔
+
+- Página de Lista de Times
+Objetivo: Apresentar uma visão geral de todos os times de futebol disponíveis.
 
 Users (Usuários):
 
@@ -76,6 +90,10 @@ Listar todos os usuários: GET /users
 Detalhes de um usuário específico: GET /users/:id
 ~~~
 
+### o que posso fazer? 🤔
+
+- Página de Lista de Usuários
+Objetivo: Exibir uma visão geral de todos os usuários cadastrados na plataforma.
 ## 🛠 Instruções para Trabalhar 
 
 ### 1. Fork do Repositório
