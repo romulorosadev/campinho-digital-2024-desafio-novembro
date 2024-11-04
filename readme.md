@@ -1,13 +1,12 @@
-**Projeto: Plataforma de Exploração de Conteúdo*
+*Projeto: Plataforma de Exploração de Conteúdo*
 
 ## 📋 Descrição do Projeto
 
 Imagine que você faz parte de uma equipe de desenvolvimento responsável por criar uma plataforma inovadora que permita aos usuários explorar e interagir com diferentes tipos de conteúdo, como filmes, produtos ou times de futebol. O objetivo é desenvolver uma aplicação que consuma dados de uma API rica em informações e apresente esses dados de maneira intuitiva e atraente.
 
-<img src="https://github.com/user-attachments/assets/cbf8fd5c-0bbe-4078-8c45-3c97868c05d9" alt="Receita 3" width="500px">
+## Para se inspirar - ONG Campinho - Loja de Roupas
 
-[FIGMA](https://www.figma.com/design/xFS8VNZxnHjS83ekaDlTTx/Food-recipes-website-UI---Del%C3%ADcias-%C3%A0-Mesa-(Community)?node-id=0-1&node-type=canvas&t=oTAUZXbEa8XLF2AG-0)  
-
+A ONG Campinho é uma organização sem fins lucrativos dedicada a capacitar pessoas com o ensino de tecnologia. Para ajudar a arrecadar fundos para manter nossas turmas, desenvolvemos uma plataforma de e-commerce que permite a compra de roupas, com todas as vendas revertidas para os nossos programas.
 
 ## ✅ Critérios de Aceitação
 
