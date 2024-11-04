@@ -1,7 +1,8 @@
-## Desafio Hands On: **Página de Receita**
+## + **Projeto: Plataforma de Exploração de Conteúdo*
 
 ## 📋 Descrição do Projeto
-Você foi contratado(a) para criar uma página web simples de uma receita de cozinha. O objetivo é praticar `HTML` e `CSS`, criando uma estrutura básica de página com estilos básicos aplicados.
+
+Imagine que você faz parte de uma equipe de desenvolvimento responsável por criar uma plataforma inovadora que permita aos usuários explorar e interagir com diferentes tipos de conteúdo, como filmes, produtos ou times de futebol. O objetivo é desenvolver uma aplicação que consuma dados de uma API rica em informações e apresente esses dados de maneira intuitiva e atraente.
 
 <img src="https://github.com/user-attachments/assets/cbf8fd5c-0bbe-4078-8c45-3c97868c05d9" alt="Receita 3" width="500px">
 
@@ -10,27 +11,20 @@ Você foi contratado(a) para criar uma página web simples de uma receita de coz
 
 ## ✅ Critérios de Aceitação
 
-**Estrutura HTML:**
+**Consumo da API:**
 
-   - Crie uma página chamada `receita.html`.
-   - Insira um título para a página: "Receita: Waffles".
-   - Adicione um menu de navegação com as seguintes opções: "Home", "Receitas" e "Sobre nós".
-   - Crie uma seção para os **ingredientes**, utilizando uma lista não ordenada (`ul`), com pelo menos 5 ingredientes.
-   - Crie uma seção para o **modo de preparo**, utilizando uma lista ordenada (`ol`), com pelo menos 5 etapas.
-   - Crie um rodapé.
-  
-**Estilização com CSS:**
-   - O cabeçalho deve ter uma cor de fundo clara (como amarelo).
-   - O logo "☕ Delícias à Mesa" deve estar à esquerda, seguido do menu de navegação centralizado.
-   - A imagem deve preencher a largura da tela (responsiva) e ter altura suficiente para destacar a receita.
-   - O texto "Waffles" deve ser centralizado e sobreposto à imagem.
-   - Os texto devem ser estilizados de forma a ficar visível, com espaçamento adequado entre os itens.
-  
+   - A aplicação deve realizar requisições HTTP usando métodos como `fetch` ou `axios` para consumir dados do endpoint de GET da API fornecida.
+Os dados devem ser carregados de forma assíncrona e tratadas possíveis falhas de requisição com mensagens de erro exibidas na interface.
+   - Os dados devem ser carregados de forma assíncrona e tratadas possíveis falhas de requisição com mensagens de erro exibidas na interface.
 
+ **Exibição de Dados na Tela:**
+
+- As informações retornadas pela API devem ser exibidas na tela usando manipulação do DOM (Document Object Model).
+- Elementos HTML devem ser criados e adicionados dinamicamente ao DOM para exibir os dados de maneira clara e estruturada.
+- Os dados devem incluir campos como título, descrição e quaisquer outros detalhes relevantes para o tema (por exemplo, nome do produto, sinopse do filme ou nome do time de futebol).
+  
  **Bônus:**
-   - Coloque uma imagem centralizada relacionada à receita (ex: uma foto de waffles) abaixo do cabeçalho.
-   - A imagem deve estar centralizada na página.
-
+Solte sua imaginação!: Sinta-se à vontade para estilizar e aprimorar a aplicação da forma que desejar. Use cores, fontes, animações e layouts criativos para tornar a experiência visualmente atrativa e única. Quanto mais criativa e bem apresentada a interface, melhor!
 
 
 ### Git e GitHub:
@@ -99,7 +93,6 @@ npm start
 - Criar um servidor local.
 - Abrir o seu navegador padrão.
 - Carregar o arquivo index.html do seu projeto.
-
 
 
 ### 5. Versionamento com Git
