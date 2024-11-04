@@ -47,50 +47,49 @@ Authorization: Bearer 66e2589493175d28b257c265c4ba0888ef2f77722b35c45b1666018cda
 
 
 ## Endpoints Disponíveis 📑
-Movies (Filmes):
+
+### Movies (Filmes):
 
 ~~~javascript
 Listar todos os filmes: GET /movies
 Detalhes de um filme específico: GET /movies/:id
 ~~~
 
-### o que posso fazer? 🤔
+#### o que posso fazer? 🤔
 
 - Página de Lista de Filmes
 Objetivo: Apresentar uma visão geral dos filmes disponíveis.
 
-Products (Produtos):
+### Products (Produtos):
 
 ~~~javascript
 Listar todos os produtos: GET /products
 Detalhes de um produto específico: GET /products/:id
 ~~~
 
-### o que posso fazer? 🤔
-
+#### o que posso fazer? 🤔
 - Página de Lista de Produtos
 Objetivo: Apresentar uma visão geral de todos os produtos disponíveis.
 
 
-Teams (Times de Futebol):
+### Teams (Times de Futebol):
 ~~~javascript
 Listar todos os times: GET /teams
 Detalhes de um time específico: GET /teams/:id
 ~~~
 
-### o que posso fazer? 🤔
-
+#### o que posso fazer? 🤔
 - Página de Lista de Times
 Objetivo: Apresentar uma visão geral de todos os times de futebol disponíveis.
 
-Users (Usuários):
+### Users (Usuários):
 
 ~~~javascript
 Listar todos os usuários: GET /users
 Detalhes de um usuário específico: GET /users/:id
 ~~~
 
-### o que posso fazer? 🤔
+#### o que posso fazer? 🤔
 
 - Página de Lista de Usuários
 Objetivo: Exibir uma visão geral de todos os usuários cadastrados na plataforma.
