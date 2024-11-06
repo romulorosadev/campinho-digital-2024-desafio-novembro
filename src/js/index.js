@@ -71,3 +71,16 @@ function exibirProdutos(produtos) {
     produtosContainer.appendChild(produtoDiv);
   });
 }
+
+//6 - Criar Função de Buscar e Exibir Produtos
+async function iniciarApp() {
+  const produtos = await buscarProdutos();
+  if (produtos) {
+    exibirProdutos(produtos);
+  } else {
+    console.error('Nenhum produto encontrado.');
+  }
+}
+
+// Chame a função principal ao carregar a página
+window.onload = iniciarApp;
