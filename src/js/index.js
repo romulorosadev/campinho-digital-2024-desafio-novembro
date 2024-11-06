@@ -31,3 +31,43 @@ async function buscarProdutos() {
     return null; // Em caso de erro
   }
 }
+
+//5- Criar função que recebe os produtos por parâmetros e cria elementos HTML pra cada um deles
+function exibirProdutos(produtos) {
+  const produtosContainer = document.getElementById('produtos');
+  produtosContainer.innerHTML = ''; // Limpa o container antes de adicionar novos produtos
+
+  produtos.forEach(produto => {
+    // Crie um elemento de produto
+    const produtoDiv = document.createElement('div');
+    produtoDiv.classList.add('produto');
+
+    // Adicione a imagem do produto
+    const imagem = document.createElement('img');
+    imagem.src = produto.imagens[0]; // Usa a primeira imagem
+    imagem.alt = produto.nome;
+    imagem.classList.add('produto-imagem');
+
+    // Adicione o nome e preço do produto
+    const nome = document.createElement('h2');
+    nome.textContent = produto.nome;
+
+    const preco = document.createElement('p');
+    preco.textContent = `Preço: R$ ${produto.preco.toFixed(2)}`;
+
+    // Adicione um botão de compra
+    const botaoComprar = document.createElement('button');
+    botaoComprar.textContent = 'Comprar';
+    botaoComprar.onclick = () => {
+      // Aqui você pode adicionar lógica para o botão de compra
+      alert(`Você comprou: ${produto.nome}`);
+    };
+
+    // Adicione os elementos ao container do produto
+    produtoDiv.appendChild(imagem);
+    produtoDiv.appendChild(nome);
+    produtoDiv.appendChild(preco);
+    produtoDiv.appendChild(botaoComprar);
+    produtosContainer.appendChild(produtoDiv);
+  });
+}
