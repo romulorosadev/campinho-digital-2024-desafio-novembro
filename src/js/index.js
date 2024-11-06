@@ -11,3 +11,23 @@ function configurarCabecalhos() {
     'Content-Type': 'application/json'
   };
 }
+
+//4- Criar Função Fetch para Requisição a API
+async function buscarProdutos() {
+  try {
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: configurarCabecalhos()
+    });
+
+    if (!response.ok) {
+      throw new Error('Erro na resposta da API: ' + response.status);
+    }
+
+    const data = await response.json();
+    return data.data; // Retorna os produtos
+  } catch (error) {
+    console.error('Erro ao buscar dados da API:', error);
+    return null; // Em caso de erro
+  }
+}
